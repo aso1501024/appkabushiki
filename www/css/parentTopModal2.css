@@ -1,0 +1,72 @@
+#stock-sale-modal{
+    display: none;
+    z-index: 3;
+    width:95vw;
+    height:28vh;
+}
+.modal2{
+    background-color: rgb(235,228,194);
+    position:relative;
+    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+    border-color: rgb(78,185,148);
+    border-style: solid;
+    border-width: 0.4vw;
+}
+
+.wrap2_1{
+    width:83vw;
+    height:20vh;
+    margin-top:2vh;
+    margin-bottom:2.5vh;
+    margin-left:5vw;
+    margin-right:5vw;
+    overflow: scroll;
+}
+
+.saleFrom2{
+    margin-top:1.5vh;
+    font-size:3vh;
+}
+
+.batsuButton2{
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:5vh;
+}
+.stockNum2{
+    margin-top:6.5vh;
+    margin-left:7.5vw;
+    font-size:3vh;
+    text-align:left;
+}
+
+.saleNum2{
+    margin-top:10vh;
+    margin-left:30vw;
+    font-size:4.5vh
+}
+
+.syoninButton2{
+    margin-left:8.5vw;
+    margin-top:18vh;
+    width:28vw;
+    height:3.5vh;
+    color:rgb(235,228,194);
+    background-color:rgb(225,133,65);
+    box-shadow:2.5px 3px 0px -1px rgb(247,171,77);
+    border:0;
+    font-size:2vh
+}
+
+.kyohiButton2{
+    margin-left:47vw;
+    margin-top:18vh;
+    width:28vw;
+    height:3.5vh;
+    color:rgb(235,228,194);
+    background-color:rgb(225,133,65);
+    box-shadow:2.5px 3px 0px -1px rgb(247,171,77);
+    border:0;
+    font-size:2vh
+}

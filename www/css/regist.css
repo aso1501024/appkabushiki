@@ -1,0 +1,95 @@
+*{
+    font-size:16px; /* 基準のフォントサイズを16pxとする */
+    -webkit-text-size-adjust: 100%; /* ブラウザ側での自動調整をなしにする */
+}
+
+.back{
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    background-color: #fce2c4;
+    overflow: auto;
+}
+.registBox{
+    position: absolute;
+    top: 0;
+    margin-top: 50%;
+    width: 95%;
+    min-height:40%;
+    padding-bottom: 3vw;
+    margin-left: 2.5%;
+    background-color: #d2b48c;
+    overflow:
+}
+.name{
+    margin-top:10%;
+    margin-left: 2%;
+    font-size: 5vw;
+}
+.inputField{
+    width: 73%;
+    height: 7vw;
+    margin-left: 1%;
+    font-size: 5vw;
+    border-radius: 3vw;
+}
+.id{
+    margin-top:2%;
+    margin-left: 11%;
+    font-size: 5vw;
+}
+.inputId{
+    width: 80%;
+    height: 7vw;
+    margin-left: 3%;
+    font-size: 5vw;
+    border-radius: 3vw;
+}
+.pass{
+    margin-top:2%;
+    margin-left: 4%;
+    font-size: 5vw;
+}
+.inputPass{
+    width: 76%;
+    height: 7vw;
+    margin-left: 1%;
+    font-size: 5vw;
+    border-radius: 3vw;
+}
+.mail{
+    margin-top:2%;
+    margin-left: 5%;
+    font-size: 5vw;
+}
+.inputMail{
+    width: 76%;
+    height: 7vw;
+    margin-left: 1%;
+    font-size: 5vw;
+    border-radius: 3vw;
+}
+.btn{
+    margin-top: 5% ;
+    margin-left: 32%;
+    background: linear-gradient(#ff8c00,#ea5506);
+    color: #ffffe0;
+    border-bottom: solid 2px #627295;
+    border-radius: 3px;
+    border: none;
+    font-size: 3vw;
+    width: 40%;
+    height: 6vw;
+}
+.logo{
+    width: 55%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.logo2{
+    width: 65%;
+    margin-top: 70%;
+    margin-left: 15%;
+}

@@ -1,0 +1,66 @@
+#order-add-modal{
+    display: none;
+    z-index: 3;
+    width:90vw;
+    height:30vh;
+}
+.modal{
+    background-image:url("../img/dotto2.png");
+    position:relative;
+    width:90vw;
+    height:30vh;
+    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+}
+
+.modalTitle{
+    position:absolute;
+    margin-top:3vh;
+    margin-bottom:92vh;
+    margin-left:5vw;
+    margin-right:5vw;
+    background-color:white;
+    width:80vw;
+    height:5vh;
+    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+}
+
+.modalContent{
+    position:absolute;
+    margin-top:9vh;
+    margin-left:5vw;
+    margin-right:5vw;
+    background-color:white;
+    width:80vw;
+    height:12vh;
+    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+}
+
+.modalZyutyu{
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin-left:8vw;
+    margin-bottom:4vw;
+    width:25vw;
+    height:4vh;
+    color:rgb(219,196,143);
+    background-color:rgb(162,98,67);
+    box-shadow:2.5px 3px 0px -1px rgb(120,73,50);
+    border:0;
+    font-size:2vh
+}
+
+.modalCancel{
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin-left:57vw;
+    margin-bottom:4vw;
+    width:25vw;
+    height:4vh;
+    color:rgb(219,196,143);
+    background-color:rgb(162,98,67);
+    box-shadow:2.5px 3px 0px -1px rgb(120,73,50);
+    border:0;
+    font-size:2vh
+}

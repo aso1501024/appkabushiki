@@ -1,0 +1,124 @@
+.modal6{
+    background-color:rgb(235,228,194);
+    position:relative;
+    width:88vw;
+    height:43vh;
+    border-radius: 0.5em;
+    overflow: scroll;   /* スクロール表示 */ 
+    -webkit-overflow-scrolling: touch
+}
+
+.title6{
+    background-image:url("../img/title.png");
+    background-size:100% 100%;
+    width:60vw;
+    height:5vh;
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:3vh;
+}
+
+.settingTitle6{
+    color:rgb(204,169,104);
+    font-size:2vh;
+    margin-top:0.5vh;
+    margin-left:1vw;
+}
+
+.batsuButton6{
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:4vh;
+    margin-left:80vw;
+    margin-top:4vw;
+}
+
+.settingAll6{
+    position:absolute;
+    top:0;
+    left:0;
+    width:80vw;
+    height:29vh;
+    margin-top:11vh;
+    margin-left:4vw;
+    margin-right:4vw;
+}
+
+.settingGroup6{
+    position:relative;
+    top:0;
+    left:0;
+    line-height:7vh;
+    width:80vw;
+    height:7vh;
+}
+
+.childIDLabel6{
+    position:absolute;
+    top:0;
+    left:0;
+    width:20vw;
+    font-size:2.5vh;
+    height:5vh;
+    line-height:5vh;
+}
+
+.parentIDLabel6{
+    position:absolute;
+    top:0;
+    left:0;
+    text-align:right;
+    width:30vw;
+    margin-left:25vw;
+    font-size:2.5vh;
+    margin-left:20vw;
+    height:5vh;
+    line-height:5vh;
+}
+
+.childIDData6{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left:50vw;
+    text-align:left;
+    width:25vw;
+    height:5vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.childLabel6{
+    font-size:2.5vh;
+    height:5vh;
+    line-height:5vh;
+    line-height:5vh;
+}
+
+.childPassData6{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left:50vw;
+    width:25vw;
+    height:5vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+
+.settingFinishButton{
+    width:40vw;
+    margin-left:20vw;
+    margin-right:20vw;
+    height:5vh;
+    color:rgb(235,228,194);
+    background-color:rgb(216,105,35);
+    border:0;
+    font-size:2.5vh;
+    font-family:MyFont;
+}

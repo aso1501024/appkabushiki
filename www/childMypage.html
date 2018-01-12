@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="js/childMypage.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/genericFunctions.js"></script>
+    <script>
+        //1週間の株データ
+        //var weekKabu = [240,240,240,224,240,230,240];
+        var weekKabu = [];
+        //1か月の株データ
+        //var monthKabu = [210,210,210,210,201,201,201,180,190,190,190,204,204,204,195,195,195,195,221,221,221,221,231,231,240,240,240,224,240,230,240];
+        var monthKabu = [];
+        //1年の株データ
+        //var yearKabu = [192, 232, 231, 291, 290, 331, 223, 233, 239, 240, 223, 240];
+        var yearKabu = [];
+        //全期間の日付データ
+        //allPeriod=["1/1","2/1","3/1","4/1","5/1","6/1","7/1","8/1","9/1","10/1","11/1","12/1","1/1","2/1","3/1","4/1","5/1","6/1","7/1"];
+        allPeriod=[];
+        //全期間の株データ
+        //var allKabu = [20,45,62,85,110,140,180,192, 232, 331, 491, 390, 431, 323, 433, 439, 240, 323, 380];
+        var allKabu = [];
+        //1週間の貢献度データ
+        //var weekKouken = [25,25,25,23,25,21,22];
+        var weekKouken = [];
+        //1か月の貢献度データ
+        //var monthKouken = [24,24,22,23,25,21,25,25,25,24,24,23,14,22,20,18,19,19,21,21,22,21,20,20,23,21,22,25,28,24,22];
+        var monthKouken = [];
+        //1年の貢献度データ
+        //var yearKouken = [19, 23, 33, 29, 39, 43, 32, 23, 23, 33, 32, 24];
+        var yearKouken = [];
+        //全期間の貢献度データ
+        //var allKouken = [2,4,6,8,11,14,18,19, 23, 33, 29, 39, 43, 32, 23, 23, 33, 32, 24];
+        var allKouken = [];
+        allKoukenPeriod=[];
+        //株価と貢献度の変更処理
+        flg = false; //株価ならtrue 貢献度ならfalse
+        function toggle(){
+            if(flg == true){ 
+                flg = false;
+                document.getElementById("botan").value = "株価"; // ボタンのラベルの変更
+                if(document.getElementById('now').value=="0" || document.getElementById('now').value==""){
+                    weekGraph(weekKabu);
+                }else if(document.getElementById('now').value=="1"){
+                    monthGraph(monthKabu);
+                }else if(document.getElementById('now').value=="2"){
+                    yearGraph(yearKabu);
+                }else if(document.getElementById('now').value=="3"){
+                    allGraph(allPeriod,allKabu);
+                }
+            }else{
+                flg = true;
+                document.getElementById("botan").value = "貢献度"; // ボタンのラベルの変更
+                if(document.getElementById('now').value=="0" || document.getElementById('now').value==""){
+                    weekGraph(weekKouken);
+                }else if(document.getElementById('now').value=="1"){
+                    monthGraph(monthKouken);
+                }else if(document.getElementById('now').value=="2"){
+                    yearGraph(yearKouken);
+                }else if(document.getElementById('now').value=="3"){
+                    allGraph(allKoukenPeriod,allKouken);
+                }
+            }
+        }
+
+        //現在日付取得
+        var Nowymdhms　=　new Date();
+        var year = Nowymdhms.getFullYear();
+        var month = Nowymdhms.getMonth() + 1;
+        var day = Nowymdhms.getDate();
+        //期間のセレクトボックスを選んだ時の処理
+        function changeItem(obj){
+            //もしも期間が一週間で株価表示だったら
+            if(parseInt(obj.value) === 0 && flg===false){
+                weekGraph(weekKabu);
+            }else if(parseInt(obj.value) === 0 && flg===true){ 
+                weekGraph(weekKouken);
+            }else if(parseInt(obj.value) === 1 && flg===false){ 
+                monthGraph(monthKabu);
+            }else if(parseInt(obj.value) === 1 && flg===true){
+                monthGraph(monthKouken);
+            }else if(parseInt(obj.value) === 2 && flg===false){
+                yearGraph(yearKabu);
+            }else if(parseInt(obj.value) === 2 && flg===true){
+                yearGraph(yearKouken);
+            }else if(parseInt(obj.value) === 3 && flg===false){
+                allGraph(allPeriod,allKabu);
+            }else if(parseInt(obj.value) === 3 && flg===true){
+                allGraph(allKoukenPeriod,allKouken);
+            }
+        }
+
+        //i日前の日付を取り出す
+        function beforeDaySearch(i){
+        var wNames = ['日', '月', '火', '水', '木', '金', '土'];
+        var nowDate = new Date();
+        //本日から　i　日後のDate
+        var futureDate = new Date(nowDate.getTime() + (i*24*60*60*1000));
+
+        var txt = (futureDate.getMonth()+1) + "/" + futureDate.getDate();
+        return txt;
+        }
+
+        //iか月前を取り出す
+        function beforeMonthSearch(i){
+            var tmp = new Date();
+
+            // setMonthで、「現在月 = 現在月 + ｎヶ月」を行う
+            tmp.setMonth( tmp.getMonth() + i );
+
+            var year = tmp.getFullYear();
+            var mon = tmp.getMonth();
+            var date = year + "/" + (mon < 9 ? '0' : '') + (mon + 1);
+            return date;
+        }
+
+        //ページ更新時に1週間の株価グラフ表示グラフ
+        window.onload = function(){
+            weekGraph(weekKabu);
+        }
+        
+        //1週間のグラフ表示
+        function weekGraph(info){
+            oneNum = decisionMemory(info);
+            data=info;
+            var ctx = document.getElementById("line-chart").getContext("2d");
+                var lineChartData = {
+                //X軸のラベル
+                labels : [beforeDaySearch(-6),beforeDaySearch(-5),beforeDaySearch(-4),beforeDaySearch(-3),beforeDaySearch(-2),beforeDaySearch(-1),beforeDaySearch(0)],
+                datasets : [
+                {
+                    //1つ目のグラフの描画設定
+                    label: "兄",
+                    fillColor : /*"#f2dae8"*/"rgba(255,255,255,0.0)",//面の色・透明度
+                    strokeColor : /*"#dd9cb4"*/"rgba(255,0,0,0.6)",//線の色・透明度
+                    pointColor : /*"#dd9cb4"*/"rgba(255,255,255,0.0)",//点の色・透明度
+                    pointStrokeColor : "rgba(221,156,180,0.6)",//値の点の枠線の色; 
+                    pointHighlightFill : "rgba(221,156,180,0.6)",
+                    //赤・緑・青・透明
+                    pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+                    data//labelごとのデータ
+                }
+                ]
+
+
+                }
+
+                var option = {
+                    responsive: true,
+                    bezierCurve: false,//線がまっすぐになります
+                    // アニメーション停止
+                    // animation: false
+                    scaleOverride: true, //縦軸のメモリの上書き許可
+                    //** ↑がtrueの場合 **
+                    datasetStrokeWidth : 4,//グラフ線の太さ
+                    pointDotRadius : 0.1,//グラフ点の半径
+                    scaleFontSize: 10, //目盛りの文字の大きさ 
+                    scaleFontStyle : "normal",//目盛りのフォントスタイル bold→太字 
+                    scaleStepWidth : oneNum, //縦軸の目盛り
+                    scaleSteps: 10,// 縦軸の目盛りの数
+                    scaleStartValue : 0,//Number - 目盛りの最小値 
+                    scaleShowLabels : true,//目盛りを表示するかどうか 
+                    scaleFontFamily : "'Arial'",//目盛りのフォント
+                }
+                //グラフを描画する
+                var myNewChart = new Chart(ctx).Line(lineChartData,option);
+        }
+
+        //1か月のグラフ表示
+        function monthGraph(info){
+            oneNum = decisionMemory(info);
+            data=info;
+            var ctx = document.getElementById("line-chart").getContext("2d");
+                var lineChartData = {
+                //X軸のラベル
+                labels : [beforeDaySearch(-29),"","","","",beforeDaySearch(-24),"","","","",beforeDaySearch(-19),"","","","",beforeDaySearch(-14),"","","","",beforeDaySearch(-9),"","","","",beforeDaySearch(-4),"","","",beforeDaySearch(0)],
+                datasets : [
+                {
+                    //1つ目のグラフの描画設定
+                    label: "兄",
+                    fillColor : /*"#f2dae8"*/"rgba(255,255,255,0.0)",//面の色・透明度
+                    strokeColor : /*"#dd9cb4"*/"rgba(255,0,0,0.6)",//線の色・透明度
+                    pointColor : /*"#dd9cb4"*/"rgba(255,255,255,0.0)",//点の色・透明度
+                    pointStrokeColor : "rgba(221,156,180,0.6)",//値の点の枠線の色; 
+                    pointHighlightFill : "rgba(221,156,180,0.6)",
+                    //赤・緑・青・透明
+                    pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+                    data//labelごとのデータ
+                }
+                ]
+
+
+                }
+
+                var option = {
+                    responsive: true,
+                    bezierCurve: false,//線がまっすぐになります
+                    // アニメーション停止
+                    // animation: false
+                    scaleOverride: true, //縦軸のメモリの上書き許可
+                    //** ↑がtrueの場合 **
+                    datasetStrokeWidth : 4,//グラフ線の太さ
+                    pointDotRadius : 0.1,//グラフ点の半径
+                    scaleFontSize: 10, //目盛りの文字の大きさ 
+                    scaleFontStyle : "normal",//目盛りのフォントスタイル bold→太字 
+                    scaleStepWidth : oneNum, //縦軸の目盛り
+                    scaleSteps: 10,// 縦軸の目盛りの数
+                    scaleStartValue : 0,//Number - 目盛りの最小値 
+                    scaleShowLabels : true,//目盛りを表示するかどうか 
+                    scaleFontFamily : "'Arial'"//目盛りのフォント
+                }
+                //グラフを描画する
+                var myNewChart = new Chart(ctx).Line(lineChartData,option);
+        }
+
+        //1年間のグラフ
+        function yearGraph(info){
+            oneNum = decisionMemory(info);
+            data=info
+            var ctx = document.getElementById("line-chart").getContext("2d");
+                var lineChartData = {
+                //X軸のラベル
+                labels : [beforeMonthSearch(-11),beforeMonthSearch(-10),beforeMonthSearch(-9),beforeMonthSearch(-8),beforeMonthSearch(-7),beforeMonthSearch(-6),beforeMonthSearch(-5),beforeMonthSearch(-4),beforeMonthSearch(-3),beforeMonthSearch(-2),beforeMonthSearch(-1),beforeMonthSearch(0)],
+                datasets : [
+                {
+                    //1つ目のグラフの描画設定
+                    label: "兄",
+                    fillColor : /*"#f2dae8"*/"rgba(255,255,255,0.0)",//面の色・透明度
+                    strokeColor : /*"#dd9cb4"*/"rgba(255,0,0,0.6)",//線の色・透明度
+                    pointColor : /*"#dd9cb4"*/"rgba(255,255,255,0.0)",//点の色・透明度
+                    pointStrokeColor : "rgba(221,156,180,0.6)",//値の点の枠線の色; 
+                    pointHighlightFill : "rgba(221,156,180,0.6)",
+                    //赤・緑・青・透明
+                    pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+                    data//labelごとのデータ
+                }
+                ]
+
+
+                }
+
+
+                var option = {
+                    responsive: true,
+                    bezierCurve: false,//線がまっすぐになります
+                    // アニメーション停止
+                    // animation: false
+                    scaleOverride: true, //縦軸のメモリの上書き許可
+                    //** ↑がtrueの場合 **
+                    datasetStrokeWidth : 4,//グラフ線の太さ
+                    pointDotRadius : 0.1,//グラフ点の半径
+                    scaleFontSize: 10, //目盛りの文字の大きさ 
+                    scaleFontStyle : "normal",//目盛りのフォントスタイル bold→太字 
+                    scaleStepWidth : oneNum, //縦軸の目盛り
+                    scaleSteps: 10,// 縦軸の目盛りの数
+                    scaleStartValue : 0,//Number - 目盛りの最小値 
+                    scaleShowLabels : true,//目盛りを表示するかどうか 
+                    scaleFontFamily : "'Arial'"//目盛りのフォント
+                }
+                //グラフを描画する
+                var myNewChart = new Chart(ctx).Line(lineChartData,option);
+        }
+
+        //全期間のグラフ
+        function allGraph(allPeriod,allData){
+            oneNum = decisionMemory(allData);
+
+            var labels = allPeriod;
+            var data = allData;  
+            var ctx = document.getElementById("line-chart").getContext("2d");
+                var lineChartData = {
+                //X軸のラベル
+                labels,
+                datasets : [
+                {
+                    //1つ目のグラフの描画設定
+                    label: "兄",
+                    fillColor : /*"#f2dae8"*/"rgba(255,255,255,0.0)",//面の色・透明度
+                    strokeColor : /*"#dd9cb4"*/"rgba(255,0,0,0.6)",//線の色・透明度
+                    pointColor : /*"#dd9cb4"*/"rgba(255,255,255,0.0)",//点の色・透明度
+                    pointStrokeColor : "rgba(221,156,180,0.6)",//値の点の枠線の色; 
+                    pointHighlightFill : "rgba(221,156,180,0.6)",
+                    //赤・緑・青・透明
+                    pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+                    data//labelごとのデータ
+                }
+                ]
+
+
+                }
+
+
+                var option = {
+                    responsive: true,
+                    bezierCurve: false,//線がまっすぐになります
+                    // アニメーション停止
+                    // animation: false
+                    scaleOverride: true, //縦軸のメモリの上書き許可
+                    //** ↑がtrueの場合 **
+                    datasetStrokeWidth : 4,//グラフ線の太さ
+                    pointDotRadius : 0.1,//グラフ点の半径
+                    scaleFontSize: 10, //目盛りの文字の大きさ 
+                    scaleFontStyle : "normal",//目盛りのフォントスタイル bold→太字 
+                    scaleStepWidth : oneNum, //縦軸の目盛り
+                    scaleSteps: 10,// 縦軸の目盛りの数
+                    scaleStartValue : 0,//Number - 目盛りの最小値 
+                    scaleShowLabels : true,//目盛りを表示するかどうか 
+                    scaleFontFamily : "'Arial'"//目盛りのフォント
+                }
+                //グラフを描画する
+                var myNewChart = new Chart(ctx).Line(lineChartData,option);
+        }
+    </script>
+    <link rel="stylesheet" href="css/childMypage.css">
+    <link rel="stylesheet" href="css/child.css">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+</head>
+<body>
+    <div class="back1">
+        <img class="logo" src="img/logo.png">
+        <div class="back2">
+            <div class="back3">
+                <div class="back4">
+                    <header>
+                            <img class="title" src="img/mypageSolid.png"/>
+                            <div class="font0">
+                                マイページ    
+                            </div>
+                            <div>
+                                <form name="sample">
+                                    <select class="select" id="now" name="period" onchange="changeItem(this)">
+                                        <option value="0">1週間</option>
+                                        <option value="1">1か月</option>
+                                        <option value="2">1年</option>
+                                        <option value="3">全期間</option>
+                                    </select>
+                                </form>
+                                <div class="graphBack">
+                                    <div class="graph">
+                                        <canvas id="line-chart" width="100%" height="75%"></canvas>
+                                    </div>
+                                </div>                                
+                            </div>
+                                <input class="kabu_kouken" type="button" id="botan" value="株価" onclick="toggle()">
+                    </header>
+                    <div class="info">
+                        <div class="info1">
+                            <div class="font1">名前</div>
+                            <div id="child-name" class="font2"></div>
+                        </div>
+                        <div class="info1">
+                            <div class="font1">所持株数</div>
+                            <div id="child-stock-num" class="font2"></div>
+                        </div>
+                        <div class="info1">
+                            <div class="font1">熟練度</div>
+                            <div id="" class="font3_5"></div>
+                            <div class="font4">
+                            
+                            </div>
+                        </div>
+                        <div id="category">
+                        
+                        </div>
+                        <div class="info1">
+                            <div class="font1">クエスト成功率</div>
+                            <div id="quest-clear-probability" class="font2"></div>
+                        </div>
+                        <div class="info1" style="margin-bottom:16vh">
+                            <div class="font1">累計クエスト達成回数</div>
+                            <div id="quest-clear-num" class="font2"></div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="foot">
+                    <div class="flexbox">
+                        <div id="childTop" class="box"><img src="img/topButton.png"  alt="子供用トップページはこちら" /></div>
+                        <div id="childQuest" class="box"><img src="img/questButton.png"  alt="クエストページはこちら" /></div>
+                        <div id="childStockSale" class="box"><img src="img/StockSaleButton.png"  alt="株売却ページこちら" /></div>
+                        <div id="childMypage" class="box"><img src="img/mypageNowButton.png" alt="マイページはこちら" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/parentTop.css">
+    <link rel="stylesheet" href="css/parentTopS.css">
+    <link rel="stylesheet" href="css/parentTopModal1.css">
+    <link rel="stylesheet" href="css/parentTopModal2.css">
+    <link rel="stylesheet" href="css/parentTopModal3.css">
+    <link rel="stylesheet" href="css/parentTopModal4.css">
+    <link rel="stylesheet" href="css/parentTopModal5.css">
+    <link rel="stylesheet" href="css/parent.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="components/loader.js"></script>
+    <script src="js/parentTop.js"></script>
+    <script src="js/parentTopGraph.js"></script>
+    <script src="js/Chart.min.js"></script>    
+    <script src="js/move.js"></script>
+    <script src="js/genericFunctions.js"></script>
+</head>
+<body>    
+    <div class="back1">
+        <img class="logo" src="img/logo.png">
+        <div class="back2">
+            <div class="back3">
+                <div class="back4">
+                    <img class="history" src="img/historyButton.png">
+                    <form name="sample">
+                        <select class="select" id="now" name="period" onchange="changeItem(this)">
+                            <option value="0">1週間</option>
+                            <option value="1">1か月</option>
+                            <option value="2">1年</option>
+                            <option value="3">全期間</option>
+                        </select>
+                    </form>
+                    <div class="graphBack">
+                        <div class="graph">
+                            <canvas id="line-chart" width="100%" height="75%"></canvas>
+                        </div>
+                    </div>                                
+                    <input class="kabu_kouken" type="button" id="botan" value="株価" onclick="toggle()">
+                    <div class="haveStockBar">
+                        <div class="font0">所持株状況</div>    
+                    </div>
+                    <div class="stockChildGroup">
+                    
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="flexbox">
+                        <div id="parentTop" class="box"><img src="img/topNowButton.png"  alt="親用トップページはこちら" /></div>
+                        <div id="parentQuest" class="box"><img src="img/questButton.png"  alt="クエストページはこちら" /></div>
+                        <div id="parentSetting" class="box"><img src="img/settingButton.png"  alt="クエストページはこちら" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--履歴ボタンが押された時にでるモーダル-->
+    <div id="history-modal" class="modal1 modal-container">
+        <div class="modalTitle1"><div class="modalFont1_1">申請情報</div></div>
+        <div class="batsuButton1">×</div>
+        <div class="modalArticleGroup1">
+            <!--
+            <div class="modalArticle1">
+                <div class="childName1">陽菜に</div>
+                <div class="modalContent1">配当を渡してください。</div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <!--履歴画面の売却申請ボタンを押したときに出るモーダル-->
+    <div id="stock-sale-modal" class="modal2 modal-container">
+        <div class="wrap2_1">
+            <span class="saleFrom2">陽菜からの売却申請</span><span class="batsuButton2">×</span>
+            <div class="sale-container">
+                <div class="stockNum2">240株</div>
+                <div class="saleNum2">7,200円</div>
+                <button class="syoninButton2">承認</button><button class="kyohiButton2">拒否</button>
+            </div>
+            <div class="sale-container">
+                <div class="stockNum2">240株</div>
+                <div class="saleNum2">7,200円</div>
+                <button class="syoninButton2">承認</button><button class="kyohiButton2">拒否</button>
+            </div>
+        </div>
+    </div>
+
+    <!--履歴画面の配当金ボタンを押したときに出るモーダル-->
+    <!--
+    <div class="modal3">
+        <div class="wrap3_1">
+            <span class="childName3">陽菜</span><span class="batsuButton3">×</span>
+            <span class="stockPriceTitle3">株価</span><span class="stockPrice3">30円</span>
+            <span class="stockNumTitle3">株数</span><span class="stockNum3">260株</span>
+            <span class="yieldTitle3">利回り</span><span class="yield3">1.5%</span>
+            <div class="yieldPrice3">7,200円</div>
+            <button class="KanryoButton3">完了</button>
+        </div>
+    </div>
+    -->
+
+    <!--履歴画面のクエスト完了申請を押した場合-->
+    <div id="quest-modal" class="modal4 modal-container">
+        <span class="arrowButton4"><img class="arrowButtonSize4" src="img/orangeArrow.png"></span>
+        <span class="batsuButton4">×</span>
+        <div class="questGroup4">
+            <div class="quest4">
+                <div class="questTitle4">皿洗い</div>
+                <button class="confirmButton4">確認</button>
+                <button class="DenialButton4">拒否</button>
+            </div>
+            <div class="quest4">
+                <div class="questTitle4">草むしり</div>
+                <button class="confirmButton4">確認</button>
+                <button class="DenialButton4">拒否</button>
+            </div>
+            <div class="quest4">
+                <div class="questTitle4">テストで80点以上</div>
+                <button class="confirmButton4">確認</button>
+                <button class="DenialButton4">拒否</button>
+            </div>
+            <div class="quest4">
+                <div class="questTitle4">トイレ掃除</div>
+                <button class="confirmButton4">確認</button>
+                <button class="DenialButton4">拒否</button>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="modal5">
+        <div class="title5">
+            <div class="settingTitle5">初期設定</div>
+        </div>
+        <div class="batsuButton5">×</div>
+        <div class="settingAll5">
+            <form action="#">
+                <div class="settingGroup5">
+                    <span class="firstStockLabel5">初値(株価)</span>
+                    <span><input class="firstStockValue5" type="number"></span>
+                    <span class="firstStockUnit5">円</span>
+                </div>
+                <div class="settingGroup5">
+                    <span class="firstYieldLabel5">配当利回り</span>
+                    <span><input class="firstYieldValue5" type="number"></span>
+                    <span class="firstYieldUnit5">％</span>
+                </div>
+                <button class="childAddButton5">＋子ども追加</button>
+                <input class="childValue5" type="txt1">
+            </form>
+            <button class="settingFinishButton">設定</button>
+        </div>
+    </div>
+    -->
+
+</body>
+</html>

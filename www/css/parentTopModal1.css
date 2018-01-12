@@ -1,0 +1,81 @@
+#history-modal{
+    display: none;
+    z-index: 3;
+    width:80vw;
+    height:70vh;
+}
+.modal1{
+    background-image:url("../img/dotto3.png");
+    background-size: 50% 50%;
+    position:relative;
+    border-radius: 1em;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.modalTitle1{
+    background-image:url('../img/title.png');
+    background-size: 100% 100%;
+    position:relative;
+    top:0;
+    bottom:0;
+    margin-top:5vh;
+    width:55vw;
+    height:5vh;
+}
+
+.modalFont1_1{
+    color:rgb(204,169,104);
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left:2vw;
+    margin-top:1vw;
+    font-size:3vw;
+}
+.batsuButton1{
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:7vh;
+    margin-top:2.5vh;
+    margin-right:5vw;
+}
+
+.modalArticleGroup1{
+    position:absolute;
+    margin-top:6.5vh;
+    margin-left:5vw;
+    margin-right:5vw;
+    margin-bottom:3vh;
+}
+.modalArticle1{
+    position:relative;
+    background-color:white;
+    width:70vw;
+    height:11vh;
+    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+    margin-bottom:2vh;
+    border-color: rgb(78,185,148);
+    border-style: solid;
+    border-width: 0.4vw;
+}
+
+.childName1{
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:2vh;
+    margin-left:1.5vw;
+    margin-top:1vh;
+}
+
+.modalContent1{
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:2.5vw;
+    margin-left:7vw;
+    margin-top:5vh;
+    font-size:2.1vh;
+}

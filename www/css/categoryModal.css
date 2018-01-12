@@ -1,0 +1,57 @@
+*{
+    font-size:16px; /* 基準のフォントサイズを16pxとする */
+    -webkit-text-size-adjust: 100%; /* ブラウザ側での自動調整をなしにする */
+}
+.modal{
+    position:relative;
+    background-color:rgb(235,228,194);
+    width:75vw;
+    height:23vh;
+    border-radius: 0.5em;
+}
+.ret{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:0.5vh;
+    margin-right:3vh;
+    font-size:7vw;
+}
+.categoryName{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:3vh;
+    margin-left:7vw;
+    font-size:4vw;
+}
+.categoryaddBox{
+    margin-left:2.5vw;
+    width:57vw;
+    height:5vh;
+    margin-top:9vh;
+    margin-left: 4vh;
+    font-size:4vw;
+    background-color:white;
+    border: solid 1px;
+    border-color: #00ff7f;
+    border-radius: 0.5em;
+}
+.addbtn{
+    margin-top:2vh;
+    margin-left: 13vh;
+    background: linear-gradient(#3cb371,#2e8b57);
+    color: #ffffe0;
+    border-bottom: solid 2px #627295;
+    border-radius: 3px;
+    border: none;
+    font-size: 3vw;
+    width: 40%;
+    height: 6vw;
+}
+#category-add-modal{
+    width:75vw;
+    height:23vh;
+    display: none;
+    z-index: 3;
+}

@@ -1,0 +1,98 @@
+#quest-modal{
+    display: none;
+    z-index: 3;
+    width:86vw;
+    height:50vh;
+}
+.modal4{
+    background-image:url('../img/dotto3.png');
+    background-size: 50% 50%;
+    position:relative;
+    border-radius: 1em;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.arrowButton4{
+    position:absolute;
+    left:0;
+    top:0;
+    margin-top:3vh;
+    margin-left:5vw;
+}
+
+.arrowButtonSize4{
+    width:7vw;
+    height:9vw;
+    transform: rotate(90deg);  /* 2D回転 */
+}
+
+.batsuButton4{
+    position:absolute;
+    right:0;
+    top:0;
+    margin-top:2vh;
+    margin-right:5vw;
+    font-size:5vh;
+}
+
+.questGroup4{
+    margin-bottom:5vh;
+    position:relative;
+    top:0;
+    left:0;
+    width:82vw;
+    margin-top:10vh;
+    margin-left:2vw;
+    margin-right:2vw;
+}
+
+.quest4{
+    background-color:white;
+    border-radius: 1em;
+    position:relative;
+    width:76vw;
+    height:10vh;
+    margin-left:3vw;
+    margin-right:3vw;
+    margin-bottom:2vh;
+}
+
+.questTitle4{
+    text-align: left;
+    line-height: 10vh;
+    font-size:2vh;
+    margin-left:8vw;
+}
+
+.confirmButton4{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:1vh;
+    margin-right:2vh;
+    width:13vh;
+    height:3.5vh;
+    color:rgb(235,228,194);
+    background-color:rgb(222,125,56);
+    box-shadow:1px 2px 0px -1px rgb(156,78,0);
+    border:0;
+    font-size:2vh;
+    font-family:MyFont;
+}
+
+.DenialButton4{
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin-bottom:1vh;
+    margin-right:2vh;
+    width:13vh;
+    height:3.5vh;
+    color:rgb(61,54,20);
+    background-color:rgb(249,212,126);
+    box-shadow:1px 2px 0px -1px rgb(168,100,30);
+    border:0;
+    font-size:2vh;
+    font-family:MyFont;
+}

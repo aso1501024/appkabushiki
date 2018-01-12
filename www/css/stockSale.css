@@ -1,0 +1,421 @@
+*{
+    font-size:16px; /* 基準のフォントサイズを16pxとする */
+    -webkit-text-size-adjust: 100%; /* ブラウザ側での自動調整をなしにする */
+}
+.back1{
+    background-color:rgb(56,35,21);
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:100%;
+    width: 100%;
+}
+.back2{
+    background-color:rgb(200,137,98);
+    position:absolute;
+    bottom:0;
+    height:93%;
+    width: 100%;
+    border-radius: 70% 70% 0 0 / 4% 4% 0 0;
+}
+.back3{
+    background-color:rgb(56,35,21);
+    position:absolute;
+    bottom:0;
+    height:99.4%;
+    width: 100%;
+    border-radius: 70% 70% 0 0 /4% 4% 0 0;
+}
+.back4{
+    background-image: url("../img/chidori.png");
+    background-size: 100% 100%;
+    position:absolute;
+    bottom:0;
+    height:99.4%;
+    width: 100%;
+    border-radius: 90% 90% 0 0 /4% 4% 0 0;
+    overflow: scroll;   /* スクロール表示 */
+    -webkit-overflow-scrolling: touch
+}
+.logo{
+    position:absolute;
+    top:0;
+    margin-left:32vw;
+    width: 35vw;
+    height: 7vh;
+}
+
+.title{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:6%;
+    width: 50%;
+    height: auto;
+}
+
+.stock-price{
+    position: relative;
+    top:0;
+    left: 0;
+    margin-top: 20%;
+    margin-left: 8%;
+    width:25vw;
+    height:25vw;
+    background-color: #F6E3CE;
+}
+
+.stock-hold{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 20%;
+    margin-right: 8%;
+    width:55vw;
+    height:8vw;
+    border-radius: 0.8em;
+    background-color: #F6E3CE;
+}
+
+.oneStockBox{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 2%;
+    margin-right: 2%;
+    padding: 1%;
+    padding-left: 40%;
+}
+
+.oneStock{
+    width:5vw;
+    height:5vw;
+}
+
+.sale{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 50%;
+    margin-left: 8%;
+    padding:1%;
+    padding-left: 15%;
+    padding-bottom: 5%;
+    border-radius: 0.8em;
+    background-color: #220000;
+}
+
+.box2{
+    padding:20;
+}
+.box3{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 4%;
+    margin-right: 50%;
+    padding: 6%;
+    padding-left: 40%;
+}
+
+.box4{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 4%;
+    margin-right: 15%;
+    padding: 6%;
+    padding-left: 40%;
+}
+
+.stockBox{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 1%;
+    margin-right: 10%;
+    padding: 1%;
+    padding-left: 40%;
+}
+
+.range{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 63.5%;
+    margin-right: 8%;
+    margin-left: 8%;
+    padding-left:2%;
+    padding-right: 2%;
+    width:80vw;
+    height:8vw;
+}
+
+.decreaseButton{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:3%;
+    width: 4vw;
+    height: 4vw;
+}
+
+.increaseButton{
+    position:absolute;
+    top:0;
+    right: 0;
+    margin-top:3%;
+    width: 4vw;
+    height: 4vw;
+}
+
+.box5{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 1%;
+    margin-left: 20%;
+    padding: 50%;
+    padding-left: 15%;
+    width:20vw;
+}
+
+.Money{
+    color:rgb(204,0,0);
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 57%;
+    margin-right: 0%;
+    padding: 6%;
+    font-size:5vw;
+}
+
+.font0{
+    color:rgb(204,169,104);
+    position:absolute;
+    top:0;
+    margin-left:1%;
+    margin-top:7%;
+    font-size:3vw;
+}
+
+.font1{
+    margin-left:7%;
+    margin-top:5%;
+    font-size:5vw;
+}
+.font2{
+    color:rgb(204,0,0);
+    position: absolute;
+    right: 0;
+    margin-top: 5%;
+    margin-right:27%;
+    font-size:10vw
+}
+
+.font3{
+    position:absolute;
+    top:0;
+    left:  0;
+    margin-top:1%;
+    font-size:3vw;
+}
+
+.font{
+    float:left;
+    margin-left:8%;
+    font-size:3vw;
+    padding-top:1vh;
+}
+
+.font4{
+    color:rgb(0,128,0);
+    position:absolute;
+    top:0;
+    right: 0;
+    margin-right: 0;
+    margin-top:1%;
+    font-size:3vw;
+}
+
+.font5{
+    color:rgb(204,169,104);
+    position:absolute;
+    top:0;
+    left:  0;
+    font-size:3vw;
+}
+
+.font6{
+    color:#ccff99;
+    background-color:#349956;
+    background: linear-gradient(#72bf8c, #349956);
+    position:absolute;
+    top:0;
+    left: 0;
+    margin-top:2%;
+    width:24vw;
+    height:9vw;
+    box-shadow:1px 4px 0px 0px#277742;
+    border:1px solid #000;
+    font-size:5vw;
+}
+
+.after-sele{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 80%;
+    margin-right: 8%;
+    margin-left: 8%;
+    width:84vw;
+    height:47vw;
+    border-radius: 2em;
+    background-color: #F6E3CE;
+}
+
+.stockNumSaleBox{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top:19%;
+    font-size: 2vw;
+    border-bottom: 4px solid #FAAC58;
+    width:86%;
+}
+
+.stockNumSalePng{
+    position:absolute;
+    margin-top: 6%;
+    margin-left: 7%;
+    width: 12%;
+    height: auto;
+}
+
+.stockNumSale{
+    color:#4d260b;
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right: 2%;
+    margin-top: -12%;
+    font-size: 6vw;
+}
+
+.stockNumSaleMoneyBox{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top:34%;
+    font-size: 2vw;
+    border-bottom: 4px solid #FAAC58;
+    width:86%;
+}
+
+.stockNumSaleMoneyPng{
+    position:absolute;
+    margin-top: 21%;
+    margin-left: 7%;
+    width: 12%;
+    height: auto;
+}
+
+.stockNumSaleMoney{
+    color:#4d260b;
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right: 2%;
+    margin-top: -12%;
+    font-size: 6vw;
+}
+
+.remaindStockBox{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top:49%;
+    font-size: 2vw;
+    border-bottom: 4px solid #FAAC58;
+    width:86%;
+}
+
+.remaindStockPng{
+    position:absolute;
+    margin-top: 36%;
+    margin-left: 7%;
+    width: 12%;
+    height: auto;
+}
+
+.remaindStock{
+    color:#800000;
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right: 2%;
+    margin-top: -12%;
+    font-size: 6vw;
+}
+
+.apply{
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-top: 132%;
+    margin-right: 8vw;
+    padding-bottom:20vh;
+    width:24vw;
+    height:9vw;
+}
+#slider{
+    width: 85%;
+    height: 40%;
+    margin-top: 3.3%;
+    margin-left: 5%;
+}
+#slider .ui-slider-handle{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    margin-top: -1.5%;
+}
+#slider .ui-slider-range {
+    background: #ffa552;
+}
+        
+        
+#saleSubmit{
+    cursor: pointer;
+}        
+#stock-plus{
+    cursor: pointer;
+}
+#stock-minus{
+    cursor: pointer;
+}
+.decreaseButton{
+    cursor: pointer;
+}
+.increaseButton{
+    cursor: pointer;
+}
+        
+        
+        
+        
+        
+        
+        
+        
+        

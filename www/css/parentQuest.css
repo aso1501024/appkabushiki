@@ -1,0 +1,271 @@
+*{
+    font-size:16px; /* 基準のフォントサイズを16pxとする */
+    -webkit-text-size-adjust: 100%; /* ブラウザ側での自動調整をなしにする */           
+}
+.back1{
+    background-color:rgb(56,35,21);
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:100%;
+    width: 100%; 
+}
+.back2{
+    background-color:rgb(200,137,98);
+    position:absolute;
+    bottom:0;
+    height:93%;
+    width: 100%;
+    border-radius: 70% 70% 0 0 / 4% 4% 0 0;
+}
+.back3{
+    background-color:rgb(56,35,21);
+    position:absolute;
+    bottom:0;
+    height:99.4%;
+    width: 100%; 
+    border-radius: 70% 70% 0 0 /4% 4% 0 0;
+}
+.back4{
+    background-image: url("../img/chidori3.png");
+    background-size: 100% 100%;
+    position:absolute;
+    bottom:0;
+    height:99.4%;
+    width: 100%; 
+    border-radius: 90% 90% 0 0 /4% 4% 0 0;
+    overflow: scroll;   /* スクロール表示 */
+    -webkit-overflow-scrolling: touch
+    
+}
+.logo{
+    position:absolute;
+    top:0;
+    margin-left:32vw;
+    width: 35vw;    
+    height: 7vh; 
+}
+
+.questBar{
+    background-image:url('../img/title.png');
+    background-size: 100% 100%;
+    position:relative;
+    top:0;
+    left:0;
+    margin-top:4vh;
+    width:65vw;
+    height:4.5vh;
+    font-size:3vw;
+}
+
+.font0{
+    color:rgb(204,169,104);
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left:2vw;
+    margin-top:1vw;
+    font-size:3vw;
+}
+
+.updateIconPlace{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:5vh;
+    margin-right:25vw
+}
+
+.updateIcon{
+    width:5vw;
+    height:5vw;
+}
+
+.jumpCategory{
+    position:absolute;
+    background-color:rgb(84,126,47);
+    border-radius: 0.5em;
+    width:17vw;
+    height:6vw;
+    top:0;
+    right:0;
+    margin-top:5vh;
+    margin-right:7vw
+}
+
+.font1{
+    line-height: 6vw;
+    color:white;
+    font-size:2vw;
+    text-align:center;
+}
+
+.addGroup{
+    position:relative;
+    margin-top:3vh;
+    margin-left:11vw;
+    margin-right:11vw;
+    width:78vw;
+    height:15vh;
+}
+
+.addNormalGroup{
+    position:relative;
+    background-color:white;
+    width:78vw;
+    height:6vh;
+    margin-bottom:1vh;
+    cursor: pointer;
+}
+
+.addSpecialGroup{
+    position:relative;
+    background-color:white;
+    width:78vw;
+    height:6vh;
+    margin-bottom:1vh;
+    cursor: pointer;
+}
+
+
+.plusIcon{
+    line-height:6vh;
+    font-size:5vw;
+    font-weight:bold;
+    text-align:left;
+    margin-left:3vw;
+}
+
+.addQuest{
+    font-size:4vw;
+    margin-left:7vw;
+}
+
+.specialQuestGroup{
+    position:relative;
+    margin-top:2vh;
+    margin-left:5vw;
+    margin-right:5vw;
+    width:90vw;
+}
+
+.specialQuestArticle{
+    background-image:url('../img/specialBack.png');
+    background-size:100% 100%;
+    position:relative;
+    width:90vw;
+    height:7.5vh;
+    margin-bottom:2vh;
+}
+
+.specialTitle{
+    line-height: 7.5vh;
+    color:white;
+    font-size:3.5vw;
+    text-align:left;
+    margin-left:5vw;
+}
+
+.specialDeadLine{
+    font-size:2.5vw;
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin-bottom:0.5vh;
+    margin-right:21vw;
+}
+
+.specialChangeButton{
+    position:absolute;
+    top:0;
+    right:0;
+    width:14vw;
+    height:3.5vh;
+    margin-right:3vw;
+    margin-top:2vh;
+    margin-bottom:2vh;
+    font-size:2.5vw;
+    border:0;
+    background-color:rgb(238,220,188)
+}
+
+.normalQuest{
+    position:relative;
+    margin-top:5vw;
+    margin-left:5vw;
+    margin-right:5vw;
+    width:90vw;
+    margin-bottom:13vh;
+}
+
+
+.category{
+    color:rgb(56,35,21);
+    font-size:3vh;
+    margin-left:1vw;
+    margin-bottom:1vh;
+}
+
+.normalArticle{
+    background-image:url('../img/normalNotBack.png');
+    background-size:100% 100%;
+    position:relative;
+    width:90vw;
+    height:7.5vh;
+    margin-bottom:2vh;
+}
+
+.normalTitle{
+    position:absolute;
+    left:0;
+    top:0;
+    font-size:3.5vw;
+    margin-left:4vw;
+    margin-top:1.5vw;
+}
+
+.weekAll{
+    position:absolute;
+    left:0;
+    bottom:0;
+    font-size:3.5vw;
+    margin-left:4vw;
+    margin-bottom:0.5vw;
+}
+
+.weekOn{
+    font-size:3vw;
+    margin-right:1vw;
+    color:rgb(80,137,58)
+}
+
+.weekOff{
+    font-size:3vw;
+    margin-right:1vw;
+    color:rgb(136,136,136)
+}
+
+.stockNum{
+    font-size:3vw;
+    position:absolute;
+    right:0;
+    bottom:0;
+    font-size:3.5vw;
+    margin-right:20vw;
+    margin-bottom:1vw;
+}
+
+.normalChangeButton{
+    position:absolute;
+    top:0;
+    right:0;
+    width:14vw;
+    height:3.5vh;
+    margin-right:3vw;
+    margin-top:2vh;
+    margin-bottom:2vh;
+    font-size:2.5vw;
+    border:0;
+    background-color:rgb(38,59,13);
+    color:rgb(243,228,175)
+}

@@ -1,0 +1,199 @@
+*{
+    font-size:16px; /* 基準のフォントサイズを16pxとする */
+    -webkit-text-size-adjust: 100%; /* ブラウザ側での自動調整をなしにする */           
+}
+.back1{
+    background-color:rgb(56,35,21);
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:100%;
+    width: 100%; 
+}
+.back2{
+    background-color:rgb(200,137,98);
+    position:absolute;
+    bottom:0;
+    height:93%;
+    width: 100%;
+    border-radius: 70% 70% 0 0 / 4% 4% 0 0;
+}
+.back3{
+    background-color:rgb(56,35,21);
+    position:absolute;
+    bottom:0;
+    height:99.4%;
+    width: 100%; 
+    border-radius: 70% 70% 0 0 /4% 4% 0 0;
+}
+.back4{
+    background-image: url("../img/chidori.png");
+    background-size: 100% 100%;
+    position:absolute;
+    bottom:0;
+    height:99.4%;
+    width: 100%; 
+    border-radius: 90% 90% 0 0 /4% 4% 0 0;
+    overflow: scroll;   /* スクロール表示 */ 
+    -webkit-overflow-scrolling: touch
+}
+.logo{
+    position:absolute;
+    top:0;
+    margin-left:32vw;
+    width: 35vw;    
+    height: 7vh; 
+}
+
+.title{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:6%;
+    width: 50%;    
+    height: auto; 
+}
+
+.select{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:6%;
+    margin-right:27%;
+    width: 20%;    
+    height: 4.5%;
+    font-size:4vw;
+}
+
+.kabu_kouken{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:6%;
+    margin-right:6%;
+    width: 20%;  
+    height: 4.5%;
+    font-size:4vw;
+}
+
+.graph{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-right:0;
+    width: 100%;    
+    height: auto;
+}
+
+.graphBack{
+    background-color:white;
+    position:absolute;
+    top:0;
+    margin-right:4%;
+    margin-left:4%;
+    margin-top:16%;
+    width: 92vw;    
+    height: 69vw; 
+}
+
+
+.font0{
+    color:rgb(204,169,104);
+    position:absolute;
+    top:0;
+    margin-left:1%;
+    margin-top:7%;
+    font-size:3vw;
+}
+
+.info {
+    position:absolute;
+    top:0;
+    margin-top:92%;
+    width: 100%;   
+}
+
+.info1 {
+    background-color:rgb(235,228,194);
+    border-radius: 0.5em;
+    height: 5vh;
+    width:92%;
+    margin:0 auto;
+    margin-bottom:1%;
+}
+
+.font1{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:12%;
+    font-size:4vw;
+}
+
+.font2{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:55%;
+    font-size:4vw;
+}
+
+
+.font3_1{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:55%;
+    font-size:4vw;
+    font-weight: bold;
+    -webkit-text-fill-color:green;
+}
+
+.font3_2{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:55%;
+    font-size:4vw;
+    font-weight: bold;
+    -webkit-text-fill-color:red;;
+}
+
+.font3_3{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:55%;
+    font-size:4vw;
+    font-weight: bold;
+    -webkit-text-fill-color:black;
+    -webkit-text-stroke:0.2px #fff;
+}
+
+.font3_4{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:55%;
+    font-size:4vw;
+    font-weight: bold;
+    -webkit-text-fill-color:#C47222;
+}
+.font3_5{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:55%;
+    font-size:4vw;
+    font-weight: bold;
+    -webkit-text-fill-color:#C0C0C0;
+}
+
+.font3_6{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:55%;
+    font-size:4vw;
+    font-weight: bold;
+    -webkit-text-fill-color:#FFD700;
+}
+
+.font4{
+    position:absolute;
+    margin-top:0.5vh;
+    margin-left:62%;
+    font-size:4vw;
+}

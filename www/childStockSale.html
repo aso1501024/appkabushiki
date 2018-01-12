@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/stockSale.css">
+    <link rel="stylesheet" href="css/child.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="js/childStockSale.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/genericFunctions.js"></script>
+</head>
+<body>
+    <div class="back1">
+        <img class="logo" src="img/logo.png">
+        <div class="back2">
+            <div class="back3">
+                <div class="back4">
+                    <!--画面バー -->
+                    <img class="title" src="./img/title.png"/>
+                    <div class="font0">
+                        株売却申請
+                    </div>
+                    <!--現在の株価表示-->
+                    <div class="stock-price">
+                        <div class="font1">株価</div>
+                        <div class="box2"><div id="one-stock-price" class="font2">30</div><div class="Money">円</div></div>
+                    </div>
+                    <!--所持している株数表示-->
+                    <div class="stock-hold">
+                        <div class="box3"><div class="font3">所持株数</div></div>
+                        <div class="box4"><div id="child-stock-num" class="font4">500</div></div>
+                        <div class="oneStockBox"><img class="oneStock" src="./img/oneStock.png"></div>
+                    </div>
+                    <!-- <img class="title" src="./img/.png"/> -->
+                    <!--売却する株を設定-->
+                    <div class="sale">
+                        <div class="box5"><div class="font5">売却数</div></div>
+                    </div>
+                    <div class="range">
+                        <div id="stock-minus" class="hoge">
+                            <img class="decreaseButton" src="./img/StockNumDownButton.png.png">
+                        </div>
+                        <div id="slider"></div>
+                        <div id="stock-plus" class="huga">
+                            <img class="increaseButton" src="./img/stockNumUpButton.png">
+                        </div>
+                    </div>
+                    <!--売却した金額と売却後の株数を表示-->
+                    <div class="after-sele">
+                        <!--売却株数-->
+                        <img class="stockNumSalePng" src="./img/oneStock2.png">
+                        <div class="stockNumSaleBox">
+                            <div id="stock-num" class="stockNumSale">240株</div>
+                        </div>
+                        <img class="stockNumSaleMoneyPng" src="./img/sumMoneyIcon.png">
+                        <div class="stockNumSaleMoneyBox">
+                            <div id="stock-sale" class="stockNumSaleMoney">7,200円</div>
+                        </div>
+                        <img class="remaindStockPng" src="./img/allStock.png">
+                        <div class="remaindStockBox">
+                            <div id="remain-stock" class="remaindStock">260株</div>
+                        </div>
+                    </div>
+
+                    <div class="apply">
+                        <input id="saleSubmit" class="font6" type="submit" value="申請">
+                    </div>
+                    <!--画面遷移-->
+                    <div class="foot">
+                        <div class="flexbox">
+                            <div id="childTop" class="box"><img src="img/topButton.png"  alt="子供用トップページはこちら" /></div>
+                            <div id="childQuest" class="box"><img src="img/questButton.png"  alt="クエストページはこちら" /></div>
+                            <div id="childStockSale" class="box"><img src="img/stockSaleNowButton.png"  alt="株売却ページこちら" /></div>
+                            <div id="childMypage" class="box"><img src="img/mypageButton.png" alt="マイページはこちら" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

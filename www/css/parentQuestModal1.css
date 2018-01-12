@@ -1,0 +1,172 @@
+#normal-quest-add-container{
+    display: none;
+    z-index: 3;
+    width:85vw;
+    height:70vh;
+}
+#normal-quest-change-container{
+    display: none;
+    z-index: 3;
+    width:85vw;
+    height:70vh;
+}
+.modal1{
+    position:relative;
+    background-color:rgb(235,228,194);
+    width:85vw;
+    height:70vh;
+    border-radius: 0.5em;
+}
+
+.select1{
+    background-color:white;
+    border-radius: 0.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:2.5vh;
+    margin-left:2.5vw;
+    width:55vw;
+    height:5.5vh;
+    padding: 2vw;
+    font-size:4vw;
+    line-height: 2.6vh
+}
+
+.batsuButtuon1{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:2vh;
+    margin-right:4vw;
+    font-size:8vw;
+}
+
+.questNameLabel1{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:9vh;
+    margin-left:4vw;
+    font-size:3.5vw;
+}
+
+.questNameValue1{
+    margin-left:2.5vw;
+    width:78.5vw;
+    height:5vh;
+    margin-top:13vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.questContentLabel1{
+    margin-top:1vh;
+    margin-left:4vw;
+    font-size:3.5vw;
+}
+
+.questContentValue1{
+    width:78.5vw;
+    margin-left:2.5vw;
+    margin-right:2.5vw;;
+    height:15vh;
+    margin-top:1vh;
+    font-size:3.5vw;
+    border-radius: 0.5em;
+}
+
+.rewaldNumLabel1{
+    margin-top:1vh;
+    margin-left:4vw;
+    font-size:3.5vw;
+}
+
+.rewaldNum1{
+    margin-top:1vh;
+    width:15vw;
+    height:5vh;
+    margin-left:35vw;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.stockUnit1{
+    font-size:4vw;
+}
+
+.doWeek1{
+    margin-top:1vh;
+    margin-left:4vw;
+    margin-bottom:2vh;
+    font-size:3.5vw;
+}
+
+.allWeek1{
+    width:75%;
+    margin-left:12.5%;
+    margin-right:12.5%;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between; /* Safari */
+    justify-content:         space-between;
+}
+
+.box1 {
+  width: 7%;
+  box-sizing: border-box;
+}
+
+.checkbox1 {
+    display: none;
+}
+label.changed {
+    font-size:4vw;
+    color:rgb(136,136,136)
+}
+input[type=checkbox]:checked ~ label.changed {
+    color:rgb(80,137,58)
+}
+
+.registerButton1{
+    margin-top:2.5vh;
+    margin-right:3vh;
+    width:20vh;
+    height:3.5vh;
+    color:rgb(219,196,143);
+    background-color:rgb(162,98,67);
+    box-shadow:2px 2px 0px -1px rgb(120,73,50);
+    border:0;
+    font-size:2.5vh;
+    margin-left:26.5vw;
+}
+.selected{
+    color:rgb(80,137,58);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+.modal3{
+    background-color: rgb(235,228,194);
+    position:relative;
+    width:95vw;
+    height:43vh;
+    border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+    border-color: rgb(78,185,148);
+    border-style: solid;
+    border-width: 0.4vw;
+}
+
+.wrap3_1{
+    position:relative;
+    left:0;
+    top:0;
+    width:83vw;
+    height:43vh;
+    margin-top:2vh;
+    margin-bottom:2.5vh;
+    margin-left:5vw;
+    margin-right:5vw;
+}
+
+.childName3{
+    position:absolute;
+    left:0;
+    top:0;
+    margin-top:1.5vh;
+    font-size:3vh;
+}
+
+
+.batsuButton3{
+    position:absolute;
+    right:0;
+    top:0;
+    font-size:5vh;
+}
+
+.stockPriceTitle3{
+    position:absolute;
+    left:0;
+    top:0;
+    margin-top:7vh;
+    margin-left:11vw;
+    font-size:3.5vh;
+}
+
+.stockPrice3{
+    position:absolute;
+    right:0;
+    top:0;
+    margin-top:7vh;
+    margin-right:11vw;
+    font-size:3.5vh;
+}
+
+.stockNumTitle3{
+    position:absolute;
+    left:0;
+    top:0;
+    margin-top:12vh;
+    margin-left:11vw;
+    font-size:3.5vh;
+    
+}
+
+.stockNum3{
+    position:absolute;
+    right:0;
+    top:0;
+    margin-top:12vh;
+    margin-right:11vw;
+    font-size:3.5vh;
+}
+
+.yieldTitle3{
+    position:absolute;
+    left:0;
+    top:0;
+    margin-top:17vh;
+    margin-left:11vw;
+    font-size:3.5vh;
+}
+
+.yield3{
+    position:absolute;
+    right:0;
+    top:0;
+    margin-top:17vh;
+    margin-right:11vw;
+    font-size:3.5vh;
+}
+
+.yieldPrice3{
+    text-align: center;
+    line-height: 43vh;
+    font-size:4vh;
+    padding-top:5vh;
+}
+
+.KanryoButton3{
+    position:absolute;
+    left:0;
+    top:0;
+    margin-top:31.5vh;
+    margin-left:24vw;
+    width:35vw;
+    height:5vh;
+    background-color:rgb(223,125,57);
+    font-size:4vh;
+    color:#fff;
+    border:0;
+    font-size:2vh
+}

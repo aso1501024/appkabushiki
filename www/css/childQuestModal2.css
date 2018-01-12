@@ -1,0 +1,179 @@
+#order-view-modal{
+    display: none;
+    z-index: 3;
+    width:85vw;
+    height:50vh;
+}
+.modal2{
+    position:relative;
+    background-image:url("../img/dotto2.png");
+    background-size:50% 50%;
+    width:85vw;
+    height:50vh;
+    border-radius: 0.5em;
+    overflow: scroll;   /* スクロール表示 */
+    -webkit-overflow-scrolling: touch
+}
+.batsuButtuon2{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:1vh;
+    margin-right:4vw;
+    font-size:8vw;
+}
+
+.questNameValue2{
+    margin-left:2.5vw;
+    margin-right:2.5vw;;
+    width:77vw;
+    height:5vh;
+    line-height:5vh;
+    margin-top:8vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.questContentValue2{
+    background-color:white;
+    width:77vw;
+    margin-left:2.5vw;
+    margin-right:2.5vw;;
+    height:15vh;
+    margin-top:1vh;
+    font-size:3.5vw;
+    border-radius: 0.5em;
+}
+
+
+.redArrow2{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:31vh;
+    margin-left:2.5vw;
+    width:3vh;
+    height:4vh;
+}
+
+.blueArrow2{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:31vh;
+    margin-right:37vw;
+    width:3vh;
+    height:4vh;
+}
+
+.winValue2{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:31vh;
+    margin-right:52vw;
+    width:24vw;
+    height:4vh;
+    text-align:right;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.loseValue2{
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:31vh;
+    margin-right:11vw;
+    text-align:right;
+    width:24vw;
+    height:4vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.redUnit2{
+    font-size:2.5vh;
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:31vh;
+    margin-right:46vw;
+}
+
+.blueUnit2{
+    font-size:2.5vh;
+    position:absolute;
+    top:0;
+    right:0;
+    margin-top:31vh;
+    margin-right:5vw;
+}
+
+.childFluctuationGroup2{
+    background-color:white;
+    border-radius: 0.5em;
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:37vh;
+    margin-right:2.5vw;
+    margin-left:2.5vw;
+    width:77vw;
+    height:auto;
+}
+
+.startYear2{
+    width:14vw;
+    height:4vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.startMonth2{
+    width:7vw;
+    height:4vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.startDay2{
+    width:7vw;
+    height:4vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.finishYear2{
+    width:14vw;
+    height:4vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.finishMonth2{
+    width:7vw;
+    height:4vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.finishDay2{
+    width:7vw;
+    height:4vh;
+    font-size:4vw;
+    background-color:white;
+    border-radius: 0.5em;
+}
+
+.dateFont2{
+    font-size:2vh
+}

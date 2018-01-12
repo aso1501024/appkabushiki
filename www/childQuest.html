@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/childQuest.css">
+    <link rel="stylesheet" href="css/childQuestModal.css">
+    <link rel="stylesheet" href="css/childQuestModal2.css">
+    <link rel="stylesheet" href="css/child.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="components/loader.js"></script>
+    <script src="js/childQuest.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/genericFunctions.js"></script>
+</head>
+<body>
+    <div class="back1">
+        <img class="logo" src="img/logo.png">
+        <div class="back2">
+            <div class="back3">
+                <div class="back4">  
+                    <div class="titleBack1">
+                        <div class="font1">スペシャルクエスト</div>    
+                    </div>
+                    <div class="specialQuest">
+                    
+                    </div>
+                    <div class="titleBack2">
+                        <div class="font2">通常クエスト</div>    
+                    </div>
+                    <div class="normalQuest">
+                        <div class="categoryGroup"> 
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="flexbox">
+                        <div id="childTop" class="box"><img src="img/topButton.png"  alt="子供用トップページはこちら" /></div>
+                        <div id="childQuest" class="box"><img src="img/questNowButton.png"  alt="クエストページはこちら" /></div>
+                        <div id="childStockSale" class="box"><img src="img/StockSaleButton.png"  alt="株売却ページこちら" /></div>
+                        <div id="childMypage" class="box"><img src="img/mypageButton.png" alt="マイページはこちら" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="order-add-modal" class="modal modal-container">
+        <div id="quest-name" class="modalTitle">
+        </div>
+        <div id="quest-content" class="modalContent">
+        </div>
+        <button id="order-btn" class="modalZyutyu">受注</button>
+        <button class="modalCancel">キャンセル</button>
+    </div>
+    
+    <div id="order-view-modal" class="modal2 modal-container">
+        <span class="batsuButtuon2 modal-cancel">×</span>
+        <div class="questNameValue2" id="special-quest-name">テストで80点をとる</div>
+        <div class="questContentValue2" id="special-quest-content">10月28日の今月の期末テストで全科目80点以上をとる。</div>
+        <div class="redArrowPlace2"><img class="redArrow2" src="img/redArrow.png"></div>
+        <div class="winValue2">10000000</div>
+        <div class="redUnit2">円</div>
+        <div><img class="blueArrow2" src="img/blueArrow.png"></div>
+        <div class="loseValue2">-100000</div>
+        <div class="blueUnit2">円</div>
+        <div class="childFluctuationGroup2">
+            <span class="startYear2" id="start-year">2010</span>
+            <span class="dataFont2">年</span>
+            <span class="startMonth2" id="start-month">10</span>
+            <span class="dataFont2">月</span>
+            <span class="startDay2" id="start-day">21</span>
+            <span class="dataFont2">日</span>
+            <span class="dataFont2">～</span>   
+            <span class="finishYear2" id="end-year">2010</span>
+            <span class="dataFont2">年</span>
+            <span class="finishMonth2" id="end-month">10</span>
+            <span class="dataFont2">月</span>
+            <span class="finishDay2" id="end-day">28</span>
+            <span class="dataFont2">日</span>
+        </div>
+    </div>
+</body>
+</html>

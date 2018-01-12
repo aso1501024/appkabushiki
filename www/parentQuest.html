@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/parentQuest.css">
+    <link rel="stylesheet" href="css/parent.css">
+    <link rel="stylesheet" href="css/parentQuestModal1.css">
+    <link rel="stylesheet" href="css/parentQuestModal2.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="components/loader.js"></script>
+    <script src="js/parentQuest.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/genericFunctions.js"></script>
+</head>
+<body>
+    <div class="back1">
+        <img class="logo" src="img/logo.png">
+        <div class="back2">
+            <div class="back3">
+                <div class="back4">
+                    <div class="questBar">
+                        <div class="font0">クエスト管理</div>   
+                    </div>
+                    <div class="updateIconPlace">
+                        <img class="updateIcon" src="img/fromQuestToCategpry.png">
+                    </div>
+                    <div class="jumpCategory">
+                        <div class="font1">カテゴリ</div>
+                    </div>
+                    <div class="addGroup">
+                        <div class="addNormalGroup" id="add-quest-btn">
+                            <span class="plusIcon">+</span>
+                            <span class="addQuest">クエスト追加</span>
+                        </div>
+                        <div class="addSpecialGroup" id="add-special-quest-btn">
+                            <span class="plusIcon">+</span>
+                            <span class="addQuest">スペシャルクエスト追加</span>
+                        </div>
+                    </div>
+                    <div class="specialQuestGroup">
+                    </div>
+                    <div class="normalQuest">
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class="flexbox">
+                        <div id="parentTop" class="box"><img src="img/topButton.png"  alt="親用トップページはこちら" /></div>
+                        <div id="parentQuest" class="box"><img src="img/questNowButton.png"  alt="クエストページはこちら" /></div>
+                        <div id="parentSetting" class="box"><img src="img/settingButton.png"  alt="クエストページはこちら" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="normal-quest-add-container" class="modal1 modal-container">
+        <span>
+            <select class="select1" name="category">
+            </select>
+        </span>
+        <span id="modal-close" class="batsuButtuon1">×</span>
+        <div class="questNameLabel1">クエスト名</div>
+        <input class="questNameValue1" type="text" name="addQuestName">
+        <div class="questContentLabel1">内容</div>
+        <textarea id="questContent" class="questContentValue1"></textarea>
+        <span class="rewaldNumLabel1">報酬株数</span>
+        <span ><input class="rewaldNum1" type="number" name="num"></span>
+        <span class="stockUnit1">株</span>
+        <div class="doWeek1">実施曜日</div>
+        <div class="allWeek1">
+            <div class="box1">
+                <div class="changed mon">月</div>
+            </div>
+            <div class="box1">
+                <div class="changed tues">火</div>
+            </div>
+            <div class="box1">
+                <div class="changed wed">水</div>
+            </div>
+            <div class="box1">
+                <div class="changed thurs">木</div>
+            </div>
+            <div class="box1">
+                <div class="changed fri">金</div>
+            </div>
+            <div class="box1">
+                <div class="changed sat">土</div>
+            </div>
+            <div class="box1">
+                <div class="changed sun">日</div>
+            </div>
+        </div>
+        <button id="quest-add-btn" class="registerButton1">登録</button>
+    </div>
+
+    <div id="normal-quest-change-container" class="modal1 modal-container">
+        <span>
+            <select id="change-select" class="select1" name="changeCategory">
+            </select>
+        </span>
+        <span id="modal-close" class="batsuButtuon1">×</span>
+        <div class="questNameLabel1">クエスト名</div>
+        <input id="changeQuestName" class="questNameValue1" type="text" name="changeQuestName">
+        <div class="questContentLabel1">内容</div>
+        <textarea id="changeQuestContent" class="questContentValue1"></textarea>
+        <span class="rewaldNumLabel1">報酬株数</span>
+        <span ><input class="rewaldNum1" type="number" name="changeNum"></span>
+        <span class="stockUnit1">株</span>
+        <div class="doWeek1">実施曜日</div>
+        <div class="allWeek2">
+        </div>
+        <button id="quest-change-btn" class="registerButton1">変更</button>
+    </div>
+
+    <div id="special-quest-add-container" class="modal2 modal-container">
+        <div class="questNameLabel2">クエスト名</div>
+        <span id="modal-close" class="batsuButtuon2">×</span>
+        <input class="questNameValue2" type="text" name="specialQuestName">
+        <div class="questContentLabel2">内容</div>
+        <textarea id="special-quest-content" class="questContentValue2"></textarea>
+        <div class="fluctuationLabel2">変動値(円)</div>
+        <div class="redArrowPlace2"><img class="redArrow2" src="img/redArrow.png"></div>
+        <div><input id="upNum" class="winValue2" type="number" name="upNum"></div>
+        <div class="redUnit2">円</div>
+        <div><img class="blueArrow2" src="img/blueArrow.png"></div>
+        <div><input id="downNum" class="loseValue2" type="number" name="downNum"></div>
+        <div class="blueUnit2">円</div>
+        <div class="childFluctuationGroup2">
+            
+            <div class="questPeriod2">期間</div>
+            <div class="startDateAll2">
+                <span><input class="startYear2" type="number" name="start-year"></span>
+                <span class="dataFont2">年</span>
+                <span><input class="startMonth2" type="number" name="start-month"></span>
+                <span class="dataFont2">月</span>
+                <span><input class="startDay2" type="number" name="start-day"></span>
+                <span class="dataFont2">日</span>
+            </div>
+            <div class="finishDateAll2">
+                <span class="dataFont2">～</span>   
+                <span><input class="finishYear2" type="number" name="end-year"></span>
+                <span class="dataFont2">年</span>
+                <span><input class="finishMonth2" type="number" name="end-month"></span>
+                <span class="dataFont2">月</span>
+                <span><input class="finishDay2" type="number" name="end-day"></span>
+                <span class="dataFont2">日</span>
+            </div>
+            
+        </div>
+    </div>    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

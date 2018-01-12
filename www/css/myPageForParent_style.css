@@ -1,0 +1,101 @@
+.mo1{
+    width:80%;
+    height:auto;
+    background-color:#ebe4c2;
+    margin:0 auto;
+    padding:2% 0;
+    border-radius:5%;
+}
+.mo2{
+    width:90%;
+    height:auto;
+    margin:0 auto;
+    font-size:0.5rem;
+}
+
+.info1{
+    margin:3% 0;
+    display:flex;
+    border-bottom:#6e4f25 0.08rem solid;
+}
+.t1{
+    flex:9.5;
+    font-size:1rem!important;
+}
+.t2{
+    flex:0.5;
+    font-size:1.2rem!important;
+    color:#6e4f25;
+}
+.top{
+    display:flex;
+}
+.il{
+    flex:4.5;
+    font-size:0.7rem!important;
+}
+.ir{
+    flex:5.5;
+    font-size:0.7rem!important;
+}
+
+
+
+.mo3{
+    width:75%;
+    height:37%;
+    background-color:#ebe4c2;
+    margin:0 auto;
+    border-radius:3%;
+}
+.mo4{
+    width:85%;
+    height:auto;
+    margin:0 auto;
+    padding-top:2%;
+    font-size:0.5rem;
+}
+.info2{
+    display:flex;
+    margin-bottom:6%;
+}
+.al{
+    flex: 3;
+    font-weight: bold;
+    color:#5f4217;
+    letter-spacing: -0.2rem;
+}
+.ar{
+    flex: 7;
+    border-bottom:#6e4f25 0.08rem solid;
+    font-size:0.9rem;
+}
+.ar>span{
+    font-size:0.9rem;
+}
+.parentid{
+    width:100%;
+    margin:0;
+    font-size:0.8rem;
+    text-align: right;
+    margin-bottom:3%;
+    margin-right:1%
+}
+.button2{
+    width:45%;
+    height:13%;
+    margin:0 auto;
+    font-size:0.7rem;
+    margin-top:6%;
+    margin-left:30%;
+    background: linear-gradient(#76a665, #426940);
+    border:none;
+    color:#eaefe1;
+}
+.xclose{
+    text-align: right;
+    margin:0;
+}
+#pass{
+    letter-spacing: -0.2rem;
+}
